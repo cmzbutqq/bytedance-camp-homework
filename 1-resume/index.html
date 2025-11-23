@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>陈梦泽 - 个人简历</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- 引入 Font Awesome 用于图标 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="resume-header">
+            <div class="header-content">
+                <h1>陈梦泽</h1>
+                <div class="contact-info">
+                    <span><i class="fas fa-phone"></i> 18221270391</span>
+                    <span><i class="fas fa-envelope"></i> mengzchen@qq.com</span>
+                    <span><i class="fab fa-weixin"></i> mengzchen</span>
+                    <span><i class="fas fa-map-marker-alt"></i> 广州、上海</span>
+                </div>
+            </div>
+            <!-- 照片占位符，实际使用时替换src -->
+            <!-- <div class="header-photo">
+                <img src="avatar.jpg" alt="陈梦泽">
+            </div> -->
+        </header>
+
+        <main>
+            <!-- 教育经历 -->
+            <section class="section education">
+                <h2 class="section-title"><i class="fas fa-graduation-cap"></i> 教育经历</h2>
+                <div class="item">
+                    <div class="item-header">
+                        <h3 class="item-title">华南理工大学</h3>
+                        <span class="item-meta">985 本科 | 计算机科学与技术</span>
+                        <span class="item-date">2023.09 - 2027.07</span>
+                    </div>
+                    <div class="item-content">
+                        <p><strong>GPA：</strong>3.86/4.0 <span class="separator">|</span> <strong>排名：</strong>年级专业排名前10%</p>
+                        <p><strong>核心课程：</strong>大学物理（上100/下97）、算法设计与分析（99）、计算机组成与体系结构（97）、电路与电子技术（97）、离散数学（96）、数据结构（95）、数字逻辑（95）、人工智能导论（94）等</p>
+                        <p><strong>荣誉：</strong>2024-2025学年综测总成绩排名6.33%；2025年10月获澳门校友会奖学金10000元（等同校一等奖）</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 荣誉奖项 -->
+            <section class="section honors">
+                <h2 class="section-title"><i class="fas fa-trophy"></i> 荣誉奖项</h2>
+                <ul class="honor-list">
+                    <li><span class="honor-name">第一届CCF算法能力大赛</span> <span class="honor-award">广东省一等奖</span></li>
+                    <li><span class="honor-name">第一届CCF算法能力大赛总决赛</span> <span class="honor-award">全国铜奖 (AI赛道)</span></li>
+                    <li><span class="honor-name">第十六届全国大学生数学竞赛 - 非数学A类</span> <span class="honor-award">广东赛区二等奖</span></li>
+                    <li><span class="honor-name">第十一届全国大学生统计建模大赛</span> <span class="honor-award">广东赛区三等奖</span></li>
+                </ul>
+            </section>
+
+            <!-- 实习经历 -->
+            <section class="section internship">
+                <h2 class="section-title"><i class="fas fa-briefcase"></i> 实习经历</h2>
+                <div class="item">
+                    <div class="item-header">
+                        <h3 class="item-title">JetBrains</h3>
+                        <span class="item-meta">学生大使</span>
+                        <span class="item-date">2025.10 - 至今</span>
+                    </div>
+                    <div class="item-content">
+                        <p>担任JetBrains学生大使，参与技术社区建设与推广活动。</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 项目经历 (重点：JS交互) -->
+            <section class="section projects">
+                <h2 class="section-title"><i class="fas fa-project-diagram"></i> 项目经历</h2>
+                <p class="tip"><i class="fas fa-info-circle"></i> 点击项目标题可展开/折叠详情</p>
+                
+                <article class="project-item" data-expanded="false">
+                    <div class="project-header">
+                        <div class="project-title-group">
+                            <h3 class="project-title">AI小记者系统</h3>
+                            <span class="project-role">React 18 + FastAPI + Gemini 2.5</span>
+                        </div>
+                        <span class="project-date">2025.09 - 2025.11</span>
+                        <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="project-details">
+                        <p>基于对话的智能文章生成系统，实现"提问-追问-生成自传"的完整闭环，为企业家撰写个人自传。</p>
+                        <ul>
+                            <li>采用Agent架构设计，支持多主题对话管理、实时流式输出、自动文章生成。</li>
+                            <li>实现智能对话系统，基于Gemini 2.5 Flash进行问题生成和深度追问，使用Gemini 2.5 Pro生成高质量自传。</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="project-item" data-expanded="false">
+                    <div class="project-header">
+                        <div class="project-title-group">
+                            <h3 class="project-title">多智能体协作的数据洞察平台</h3>
+                            <span class="project-role">Google ADK + MCP</span>
+                        </div>
+                        <span class="project-date">2025.08 - 2025.08</span>
+                        <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="project-details">
+                        <p><strong>首届CCF算法能力大赛创新创业训练营 - 小组挑战赛金奖（第一名）</strong></p>
+                        <p>负责数据分析与可视化模块，基于Google ADK和MCP工具构建智能体，实现数据特征提取、相关性分析、异常值检测等功能，通过自然语言交互生成结构化分析报告和可视化图表。</p>
+                    </div>
+                </article>
+
+                <article class="project-item" data-expanded="false">
+                    <div class="project-header">
+                        <div class="project-title-group">
+                            <h3 class="project-title">基于文本引导的医学图像分割模型</h3>
+                            <span class="project-role">PyTorch + CLIP + U-Net</span>
+                        </div>
+                        <span class="project-date">2025.05 - 2025.06</span>
+                        <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="project-details">
+                        <p>基于MICCAI 2023论文实现文本引导的医学图像分割模型。</p>
+                        <ul>
+                            <li>通过特征融合模块实现跨模态信息整合，在皮肤镜图像分割任务上达到66.29%的平均IoU和76.05%的Dice系数。</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="project-item" data-expanded="false">
+                    <div class="project-header">
+                        <div class="project-title-group">
+                            <h3 class="project-title">基于机器学习的股权质押违约预测研究</h3>
+                            <span class="project-role">FNN (MLP)</span>
+                        </div>
+                        <span class="project-date">2025.04 - 2025.04</span>
+                        <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="project-details">
+                        <p><strong>第十一届全国大学生统计建模大赛 - 广东赛区三等奖</strong></p>
+                        <ul>
+                            <li>负责FNN模型设计与实现，采用MLP结构，通过ReLU激活函数和Dropout正则化提升泛化能力。</li>
+                            <li>在测试集上达到86.91%准确率和0.9218的AUC值，有效识别股权质押违约风险。</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="project-item" data-expanded="false">
+                    <div class="project-header">
+                        <div class="project-title-group">
+                            <h3 class="project-title">基于NeRF的Unity虚拟空间重建系统</h3>
+                            <span class="project-role">Unity + Instant-NGP</span>
+                        </div>
+                        <span class="project-date">2025.07 - 2025.08</span>
+                        <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="project-details">
+                        <p>基于Unity引擎与Instant-NGP的4D智能空间重建技术研究，设计智能多摄像机系统，支持多层次数据采集。构建完整Unity-Instant-NGP训练管线，训练速度相比传统3DGS快20-30倍。</p>
+                    </div>
+                </article>
+
+                <article class="project-item" data-expanded="false">
+                    <div class="project-header">
+                        <div class="project-title-group">
+                            <h3 class="project-title">智能导航系统设计与实现</h3>
+                            <span class="project-role">Qt + C++</span>
+                        </div>
+                        <span class="project-date">2025.03 - 2025.05</span>
+                        <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="project-details">
+                        <p>实现地图生成、路径规划、交通模拟等功能。</p>
+                        <ul>
+                            <li>采用图结构和网格空间索引处理大规模地图数据（支持50000+顶点），实现Dijkstra、A*等多种路径规划算法。</li>
+                            <li>路径规划响应时间控制在50ms以内，支持实时交通状况更新。</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="project-item" data-expanded="false">
+                    <div class="project-header">
+                        <div class="project-title-group">
+                            <h3 class="project-title">植物纤维图像识别与强度预测研究</h3>
+                            <span class="project-role">ResNet18 + Optuna</span>
+                        </div>
+                        <span class="project-date">2025.03 - 2026.03</span>
+                        <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="project-details">
+                        <p>SRP项目，计算机院副教授指导。</p>
+                        <ul>
+                            <li>使用ResNet18深度学习模型进行图像分类，针对小样本数据（131样本）构建智能建模系统。</li>
+                            <li>使用Optuna进行超参数优化，实施L1/L2正则化和智能特征选择，撕裂强度预测模型R²分数达到0.547。</li>
+                        </ul>
+                    </div>
+                </article>
+            </section>
+
+            <!-- 专业技能 -->
+            <section class="section skills">
+                <h2 class="section-title"><i class="fas fa-tools"></i> 专业技能</h2>
+                <div class="skill-grid">
+                    <div class="skill-category">
+                        <h3>编程语言</h3>
+                        <p>Python (熟练), C++ (熟练), C# (基础), Qt, Unity</p>
+                    </div>
+                    <div class="skill-category">
+                        <h3>AI & ML</h3>
+                        <p>PyTorch, scikit-learn, Transformers, Pandas, NumPy</p>
+                    </div>
+                    <div class="skill-category">
+                        <h3>算法 & 数据结构</h3>
+                        <p>图论 (Dijkstra, A*), 高级数据结构 (线段树, B+树), DP</p>
+                    </div>
+                    <div class="skill-category">
+                        <h3>其他</h3>
+                        <p>CET-4 (659), CET-6 (630), 编译原理, 数据库, 嵌入式</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 陈梦泽. All rights reserved.</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

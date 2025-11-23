@@ -1,0 +1,327 @@
+:root {
+    --primary-color: #b48232; /* 简历中的金色/棕色 */
+    --text-color: #333;
+    --bg-color: #f9f9f9;
+    --card-bg: #ffffff;
+    --secondary-text: #666;
+    --border-color: #eee;
+    --spacing: 1.5rem;
+    --border-radius: 8px;
+    --transition: 0.3s ease;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+.container {
+    max-width: 900px;
+    margin: 2rem auto;
+    background: var(--card-bg);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    padding: 2rem;
+}
+
+/* Header Styles */
+.resume-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.header-content h1 {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    color: var(--secondary-text);
+    font-size: 0.95rem;
+}
+
+.contact-info span {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.contact-info i {
+    color: var(--primary-color);
+}
+
+/* Section Styles */
+.section {
+    margin-bottom: 2.5rem;
+}
+
+.section-title {
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    margin-bottom: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.5rem;
+}
+
+.item {
+    margin-bottom: 1.2rem;
+}
+
+.item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    margin-bottom: 0.3rem;
+}
+
+.item-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #000;
+}
+
+.item-meta {
+    color: var(--secondary-text);
+    font-size: 0.9rem;
+    margin-right: auto;
+    margin-left: 1rem;
+}
+
+.item-date {
+    font-size: 0.9rem;
+    color: var(--secondary-text);
+    font-weight: 500;
+}
+
+.item-content {
+    color: #444;
+    font-size: 0.95rem;
+}
+
+.item-content p {
+    margin-bottom: 0.3rem;
+}
+
+.separator {
+    color: var(--border-color);
+    margin: 0 0.5rem;
+}
+
+/* Honors List */
+.honor-list {
+    list-style: none;
+}
+
+.honor-list li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px dashed var(--border-color);
+    padding-bottom: 0.2rem;
+}
+
+.honor-name {
+    font-weight: 500;
+}
+
+.honor-award {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* Project Styles */
+.tip {
+    font-size: 0.85rem;
+    color: var(--secondary-text);
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+.project-item {
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    transition: box-shadow var(--transition);
+}
+
+.project-item:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.project-header {
+    padding: 1rem;
+    background: #fafafa;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background var(--transition);
+}
+
+.project-header:hover {
+    background: #f0f0f0;
+}
+
+.project-title-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.project-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.2rem;
+}
+
+.project-role {
+    font-size: 0.85rem;
+    color: var(--primary-color);
+    background: rgba(180, 130, 50, 0.1);
+    padding: 2px 6px;
+    border-radius: 4px;
+    display: inline-block;
+    width: fit-content;
+}
+
+.project-date {
+    margin-left: auto;
+    margin-right: 1rem;
+    font-size: 0.9rem;
+    color: var(--secondary-text);
+}
+
+.toggle-icon {
+    transition: transform var(--transition);
+    color: var(--secondary-text);
+}
+
+/* Expanded State */
+.project-item[data-expanded="true"] .toggle-icon {
+    transform: rotate(180deg);
+}
+
+.project-details {
+    padding: 0 1rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, padding 0.3s ease;
+    background: #fff;
+}
+
+.project-item[data-expanded="true"] .project-details {
+    padding: 1rem;
+    max-height: 500px; /* Approximate max height */
+    border-top: 1px solid var(--border-color);
+}
+
+.project-details ul {
+    list-style-position: inside;
+    margin-top: 0.5rem;
+}
+
+.project-details li {
+    margin-bottom: 0.3rem;
+}
+
+/* Skills Grid */
+.skill-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.skill-category h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    border-left: 3px solid var(--primary-color);
+    padding-left: 0.5rem;
+}
+
+.skill-category p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-color);
+    color: var(--secondary-text);
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        margin: 0;
+        border-radius: 0;
+        padding: 1.5rem;
+    }
+
+    .resume-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-info {
+        justify-content: center;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .item-header {
+        flex-direction: column;
+    }
+
+    .item-meta, .item-date {
+        margin: 0;
+    }
+
+    .project-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .project-date {
+        margin: 0;
+    }
+    
+    .toggle-icon {
+        position: absolute;
+        right: 1.5rem;
+        top: 1.5rem;
+    }
+    
+    .project-item {
+        position: relative;
+    }
+
+    .honor-list li {
+        flex-direction: column;
+    }
+}
+
